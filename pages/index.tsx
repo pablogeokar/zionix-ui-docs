@@ -1,5 +1,5 @@
 import pkg from '../package.json'
-import { Button, Input, useThemeContext, Text, Box } from "@zionix/ui";
+import { Button, Icon, Input, useThemeContext, Text, Box } from "@zionix/ui";
 
 export default function Home() {
 
@@ -64,6 +64,35 @@ export default function Home() {
         <Button isWarning isInverted>Login</Button>
         <Button isError isInverted>Login</Button>
       </div>
+
+      <Text level={1} >Icon Component</Text>
+      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+        <Icon icon="Alarm" size={48} />
+        <Icon icon="Alien" size={48} />
+        <Icon icon="Dog" size={48} />
+        <Icon icon="House" size={48} />
+        <Icon icon="Pencil" size={48} />
+        <Icon icon="User" size={48} />
+        <Icon icon="Users" size={48} />
+
+        <Icon icon="Alarm" weight="duotone" />
+        <Icon icon="Alien" weight="duotone" />
+        <Icon icon="Dog" weight="duotone" />
+        <Icon icon="House" weight="duotone" />
+        <Icon icon="Pencil" weight="duotone" />
+        <Icon icon="User" weight="duotone" />
+        <Icon icon="Users" weight="duotone" />
+
+        <Icon icon="Alarm" weight="bold" />
+        <Icon icon="Alien" weight="bold" />
+        <Icon icon="Dog" weight="bold" />
+        <Icon icon="House" weight="bold" />
+        <Icon icon="Pencil" weight="bold" />
+        <Icon icon="User" weight="bold" />
+        <Icon icon="Users" weight="bold" />
+
+      </div>
+
 
       <Text level={1} >Input Component</Text>
       <div style={{ maxWidth: '450px' }}>

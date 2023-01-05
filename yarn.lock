@@ -258,10 +258,12 @@
     "@typescript-eslint/types" "5.48.0"
     eslint-visitor-keys "^3.3.0"
 
-"@zionix/ui@^0.2.57":
-  version "0.2.57"
-  resolved "https://registry.yarnpkg.com/@zionix/ui/-/ui-0.2.57.tgz#6c07b28b19a20eefe0c2203cd7da2ba16213afca"
-  integrity sha512-Muh7cOGCqrKex7ZpbK2EdM4WGQauwCOwuCxth2Ty1ZNgm947haGSXtfJjnypyMXNV5Y1inZ+l6M7vvoLCXq/wg==
+"@zionix/ui@^0.2.69":
+  version "0.2.69"
+  resolved "https://registry.yarnpkg.com/@zionix/ui/-/ui-0.2.69.tgz#61ac0d339267c874ccaa67f88f7d4605e3f99442"
+  integrity sha512-PRJJjeD1Juf8vtlP9Mlz/2zjxz1cL+gb19y88P7VpDDVdmaNIfm3WSMiYFTj27/IsXGK9Dcmc6Za1PWz/eDVzA==
+  dependencies:
+    phosphor-react "^1.4.1"
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -1558,6 +1560,11 @@ path-type@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
+
+phosphor-react@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/phosphor-react/-/phosphor-react-1.4.1.tgz#97b0e034d9937db9b97fe53b186e9646464fd4e7"
+  integrity sha512-gO5j7U0xZrdglTAYDYPACU4xDOFBTJmptrrB/GeR+tHhCZF3nUMyGmV/0hnloKjuTrOmpSFlbfOY78H39rgjUQ==
 
 picocolors@^1.0.0:
   version "1.0.0"
