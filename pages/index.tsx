@@ -8,7 +8,8 @@ export default function Home() {
   return (
     <div style={{ width: '100%', maxWidth: '960px', margin: '0 auto', padding: '2rem' }}>
       <div style={{ display: 'flex', gap: '.5rem', alignItems: 'center' }}>
-        <Text level={1} secondary >ZIONIX ui</Text><Text style={{ color: 'var(--lightGray)' }}>v{pkg.dependencies["@zionix/ui"].substring(1, 10)}</Text>
+        <Text level={1} style={{ color: '#ffffff', background: '#1c1c1c', padding: '8px', borderRadius: '5px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.3)' }} >ZIONIX ui</Text>
+        <Text style={{ color: 'var(--lightGray)' }}>v{pkg.dependencies["@zionix/ui"].substring(1, 10)}</Text>
       </div>
       <Text level={1} >Typography</Text>
       <Text level={2} secondary>Text h2 element text</Text>

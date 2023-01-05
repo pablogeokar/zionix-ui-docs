@@ -4,7 +4,7 @@ import { ThemeContextProvider, ThemeFont } from "@zionix/ui";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ThemeFont />
+      <ThemeFont font='Poppins' />
       <ThemeContextProvider>
         <Component {...pageProps} />
       </ThemeContextProvider>
