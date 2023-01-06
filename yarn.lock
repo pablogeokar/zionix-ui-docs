@@ -258,10 +258,10 @@
     "@typescript-eslint/types" "5.48.0"
     eslint-visitor-keys "^3.3.0"
 
-"@zionix/ui@^0.2.79":
-  version "0.2.79"
-  resolved "https://registry.yarnpkg.com/@zionix/ui/-/ui-0.2.79.tgz#6fa08ef78c4dad66c30f37d3c99b3bfcc8280811"
-  integrity sha512-T9e46sk+HnBidxXEcFg/Ph3yCo9kbCOCUBQlSmiblVv46V1DwXg8KGBzoojc00RfCAE6CvBZqwxQ09cAzKaUnw==
+"@zionix/ui@^0.2.83":
+  version "0.2.83"
+  resolved "https://registry.yarnpkg.com/@zionix/ui/-/ui-0.2.83.tgz#c24d1bb0e61276fc05280870f89e9cdb0d5ec451"
+  integrity sha512-ARy3xKF8qb+NQm6F+Vm2ewGxUaIfQo+GhUWBlyfcT32h0sXetRIdF2S9/YQdNQ0Z9B2srCceWw7G2cUI8gdMZg==
   dependencies:
     phosphor-react "^1.4.1"
 

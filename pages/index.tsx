@@ -7,8 +7,8 @@ export default function Home() {
 
   return (
     <div style={{ width: '100%', maxWidth: '960px', margin: '0 auto', padding: '2rem' }}>
-      <div style={{ display: 'flex', gap: '.5rem', alignItems: 'center' }}>
-        <Text level={1} style={{ color: '#ffffff', background: '#1c1c1c', padding: '8px', borderRadius: '5px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.3)' }} >ZIONIX ui</Text>
+      <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+        <Text level={2} style={{ color: '#ffffff', background: '#1c1c1c', padding: '8px', borderRadius: '5px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.3)' }} >ZIONIX ui</Text>
         <Text style={{ color: 'var(--lightGray)' }}>v{pkg.dependencies["@zionix/ui"].substring(1, 10)}</Text>
       </div>
       <Text level={1} >Typography</Text>
@@ -47,23 +47,23 @@ export default function Home() {
       <Text level={4}>Normal</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
         <Button>Login</Button>
-        <Button isPrimary>Login</Button>
-        <Button isSecondary>Login</Button>
-        <Button isAccent>Login</Button>
-        <Button isSuccess>Login</Button>
-        <Button isWarning>Login</Button>
-        <Button isError>Login</Button>
+        <Button btnPrimary><Icon icon='LockKeyOpen' />Sign In</Button>
+        <Button btnSecondary><Icon icon='LockKeyOpen' />Login</Button>
+        <Button btnAccent>Login</Button>
+        <Button btnSuccess>Login</Button>
+        <Button btnWarning>Login</Button>
+        <Button btnError>Login</Button>
 
       </div>
       <Text level={4}>Background transparent with inverted colors</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-        <Button isInverted>Login</Button>
-        <Button isPrimary isInverted>Login</Button>
-        <Button isSecondary isInverted>Login</Button>
-        <Button isAccent isInverted>Login</Button>
-        <Button isSuccess isInverted>Login</Button>
-        <Button isWarning isInverted>Login</Button>
-        <Button isError isInverted>Login</Button>
+        <Button btnInverted>Login</Button>
+        <Button btnPrimary btnInverted><Icon icon='LockKeyOpen' />Sign In</Button>
+        <Button btnSecondary btnInverted><Icon icon='LockKeyOpen' />Login</Button>
+        <Button btnAccent btnInverted>Login</Button>
+        <Button btnSuccess btnInverted>Login</Button>
+        <Button btnWarning btnInverted>Login</Button>
+        <Button btnError btnInverted>Login</Button>
       </div>
 
       <Text level={1} >Icon Component</Text>
@@ -91,7 +91,7 @@ export default function Home() {
         <Icon icon="Pencil" weight="bold" />
         <Icon icon="User" weight="bold" />
         <Icon icon="Users" weight="bold" />
-
+        <Text>and more...</Text>
       </div>
 
 
@@ -100,16 +100,27 @@ export default function Home() {
         <Input label="Name" width={150} placeholder='full name here' />
       </div>
 
-      <Text level={1} >Box Component</Text>
+      <Text level={1}>Box Component</Text>
 
       <Box.Container>
-        <Text level={1}>Hello, </Text>
+        <Text level={1} secondary>Hello, </Text>
         <Box.Row>
           <Input label="Name" />
           <Input label="Last name" />
         </Box.Row>
 
         <Input label="E-mail" type='email' />
+
+        <Box.Row>
+          <Button btnPrimary btnInverted btnBorderNone>
+            <Icon icon='User' />
+            Join now
+          </Button>
+          <Button btnPrimary>
+            <Icon icon='LockKeyOpen' />
+            Sign In
+          </Button>
+        </Box.Row>
 
       </Box.Container >
 
