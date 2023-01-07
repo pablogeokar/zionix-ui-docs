@@ -31,6 +31,7 @@ export default function Home() {
       <Text>--warning: {theme.colors?.warning}; <div style={{ borderRadius: '50%', background: 'var(--warning)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
       <Text>--white: {theme.colors?.white}; <div style={{ borderRadius: '50%', background: 'var(--white)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
       <br />
+      <Text>--component-card--filter: {theme.components?.card?.filter};</Text>
       <Text>--borderRadius: {theme.layout?.borderRadius};</Text>
       <Text>--gap: {theme.layout?.gap};</Text>
       <Text>--padding: {theme.layout?.padding};</Text>
