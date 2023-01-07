@@ -1,5 +1,5 @@
 import pkg from '../package.json'
-import { Button, Icon, Input, useThemeContext, Text, Box } from "@zionix/ui";
+import { Button, Icon, Input, useThemeContext, Text, Card } from "@zionix/ui";
 
 export default function Home() {
 
@@ -31,14 +31,6 @@ export default function Home() {
       <Text>--warning: {theme.colors?.warning}; <div style={{ borderRadius: '50%', background: 'var(--warning)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
       <Text>--white: {theme.colors?.white}; <div style={{ borderRadius: '50%', background: 'var(--white)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
       <br />
-      <Text>--size-300: {theme.fontSizes?.size300};</Text>
-      <Text>--size-400: {theme.fontSizes?.size400};</Text>
-      <Text>--size-500: {theme.fontSizes?.size500};</Text>
-      <Text>--size-600: {theme.fontSizes?.size600};</Text>
-      <Text>--size-700: {theme.fontSizes?.size700};</Text>
-      <Text>--size-800: {theme.fontSizes?.size800};</Text>
-      <Text>--size-900: {theme.fontSizes?.size900};</Text>
-      <br />
       <Text>--borderRadius: {theme.layout?.borderRadius};</Text>
       <Text>--gap: {theme.layout?.gap};</Text>
       <Text>--padding: {theme.layout?.padding};</Text>
@@ -47,8 +39,8 @@ export default function Home() {
       <Text level={4}>Normal</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
         <Button>Login</Button>
-        <Button btnPrimary><Icon icon='LockKeyOpen' />Sign In</Button>
-        <Button btnSecondary><Icon icon='LockKeyOpen' />Login</Button>
+        <Button btnPrimary><Icon iconName='LockKeyOpen' />Sign In</Button>
+        <Button btnSecondary><Icon iconName='LockKeyOpen' />Login</Button>
         <Button btnAccent>Login</Button>
         <Button btnSuccess>Login</Button>
         <Button btnWarning>Login</Button>
@@ -58,8 +50,8 @@ export default function Home() {
       <Text level={4}>Background transparent with inverted colors</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
         <Button btnInverted>Login</Button>
-        <Button btnPrimary btnInverted><Icon icon='LockKeyOpen' />Sign In</Button>
-        <Button btnSecondary btnInverted><Icon icon='LockKeyOpen' />Login</Button>
+        <Button btnPrimary btnInverted><Icon iconName='LockKeyOpen' />Sign In</Button>
+        <Button btnSecondary btnInverted><Icon iconName='LockKeyOpen' />Login</Button>
         <Button btnAccent btnInverted>Login</Button>
         <Button btnSuccess btnInverted>Login</Button>
         <Button btnWarning btnInverted>Login</Button>
@@ -68,29 +60,29 @@ export default function Home() {
 
       <Text level={1} >Icon Component</Text>
       <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-        <Icon icon="Alarm" size={48} />
-        <Icon icon="Alien" size={48} />
-        <Icon icon="Dog" size={48} />
-        <Icon icon="House" size={48} />
-        <Icon icon="Pencil" size={48} />
-        <Icon icon="User" size={48} />
-        <Icon icon="Users" size={48} />
+        <Icon iconName="Alarm" size={48} />
+        <Icon iconName="Alien" size={48} />
+        <Icon iconName="Dog" size={48} />
+        <Icon iconName="House" size={48} />
+        <Icon iconName="Pencil" size={48} />
+        <Icon iconName="User" size={48} />
+        <Icon iconName="Users" size={48} />
 
-        <Icon icon="Alarm" weight="duotone" />
-        <Icon icon="Alien" weight="duotone" />
-        <Icon icon="Dog" weight="duotone" />
-        <Icon icon="House" weight="duotone" />
-        <Icon icon="Pencil" weight="duotone" />
-        <Icon icon="User" weight="duotone" />
-        <Icon icon="Users" weight="duotone" />
+        <Icon iconName="Alarm" weight="duotone" />
+        <Icon iconName="Alien" weight="duotone" />
+        <Icon iconName="Dog" weight="duotone" />
+        <Icon iconName="House" weight="duotone" />
+        <Icon iconName="Pencil" weight="duotone" />
+        <Icon iconName="User" weight="duotone" />
+        <Icon iconName="Users" weight="duotone" />
 
-        <Icon icon="Alarm" weight="bold" />
-        <Icon icon="Alien" weight="bold" />
-        <Icon icon="Dog" weight="bold" />
-        <Icon icon="House" weight="bold" />
-        <Icon icon="Pencil" weight="bold" />
-        <Icon icon="User" weight="bold" />
-        <Icon icon="Users" weight="bold" />
+        <Icon iconName="Alarm" weight="bold" />
+        <Icon iconName="Alien" weight="bold" />
+        <Icon iconName="Dog" weight="bold" />
+        <Icon iconName="House" weight="bold" />
+        <Icon iconName="Pencil" weight="bold" />
+        <Icon iconName="User" weight="bold" />
+        <Icon iconName="Users" weight="bold" />
         <Text>and more...</Text>
       </div>
 
@@ -102,27 +94,27 @@ export default function Home() {
 
       <Text level={1}>Box Component</Text>
 
-      <Box.Container>
+      <Card.Container>
         <Text level={1} secondary>Hello, </Text>
-        <Box.Row>
+        <Card.Row>
           <Input label="Name" />
           <Input label="Last name" />
-        </Box.Row>
+        </Card.Row>
 
         <Input label="E-mail" type='email' />
 
-        <Box.Row>
+        <Card.Row>
           <Button btnPrimary btnInverted btnBorderNone>
-            <Icon icon='User' />
+            <Icon iconName='User' />
             Join now
           </Button>
           <Button btnPrimary>
-            <Icon icon='LockKeyOpen' />
+            <Icon iconName='LockKeyOpen' />
             Sign In
           </Button>
-        </Box.Row>
+        </Card.Row>
 
-      </Box.Container >
+      </Card.Container >
 
     </div >
   )
