@@ -1,4 +1,5 @@
 import pkg from '../package.json'
+import styles from '../styles/zionix.module.css'
 import { Button, Icon, Input, useThemeContext, Text, Card, Marker, Hr } from "@zionix/ui";
 
 export default function Home() {
@@ -8,10 +9,16 @@ export default function Home() {
   return (
     <div style={{ width: '100%', maxWidth: '960px', margin: '0 auto', padding: '2rem' }}>
 
-      <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-        <Text level={3} style={{ color: '#ffffff', background: '#1c1c1c', padding: '5px 16px', borderRadius: '5px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.3)' }} >ZIONIX ui</Text>
-        <Text style={{ color: 'var(--lightGray)' }}>v{pkg.dependencies["@zionix/ui"].substring(1, 10)}</Text>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginTop: '2rem' }}>
+
+        <div style={{ display: 'flex', flexDirection: 'row', gap: '2px', alignItems: 'center', marginTop: '2rem' }}>
+          <span className={styles['zionix']}>ZIONIX</span>
+          <span className={styles.ui}>ui</span>
+        </div>
+
+        <Text style={{ margin: '4px', color: 'var(--lightGray)' }}>version:{pkg.dependencies["@zionix/ui"].substring(1, 10)}</Text>
       </div>
+      <Hr />
 
       <Text level={1} fontWeight={800}>Typography h1</Text>
       <Text level={1}>Typography h1</Text>
