@@ -1,5 +1,5 @@
 import pkg from '../package.json'
-import { Button, Icon, Input, useThemeContext, Text, Card } from "@zionix/ui";
+import { Button, Icon, Input, useThemeContext, Text, Card, Marker, Hr } from "@zionix/ui";
 
 export default function Home() {
 
@@ -7,36 +7,27 @@ export default function Home() {
 
   return (
     <div style={{ width: '100%', maxWidth: '960px', margin: '0 auto', padding: '2rem' }}>
+
       <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-        <Text level={2} style={{ color: '#ffffff', background: '#1c1c1c', padding: '8px', borderRadius: '5px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.3)' }} >ZIONIX ui</Text>
+        <Text level={3} style={{ color: '#ffffff', background: '#1c1c1c', padding: '5px 16px', borderRadius: '5px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.3)' }} >ZIONIX ui</Text>
         <Text style={{ color: 'var(--lightGray)' }}>v{pkg.dependencies["@zionix/ui"].substring(1, 10)}</Text>
       </div>
-      <Text level={1} >Typography</Text>
-      <Text level={2} secondary>Text h2 element text</Text>
-      <Text level={3} accent>Text h3 element text</Text>
-      <Text>Simple span element text</Text>
-      <Text level={4} color='var(--lightGray)'>Text h4 element text</Text>
-      <Text level={5}>Text h5 element text</Text>
-      <Text level={6}>Text h6 element text</Text>
 
-      <Text level={1} >css vars</Text>
-      <Text>--accent: {theme.colors?.accent}; <div style={{ borderRadius: '50%', background: 'var(--accent)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
-      <Text>--bg : {theme.colors?.body}; <div style={{ borderRadius: '50%', background: 'var(--bg)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
-      <Text>--black: {theme.colors?.black}; <div style={{ borderRadius: '50%', background: 'var(--black)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
-      <Text>--error: {theme.colors?.error}; <div style={{ borderRadius: '50%', background: 'var(--error)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
-      <Text>--lightGray: {theme.colors?.lightGray}; <div style={{ borderRadius: '50%', background: 'var(--lightGray)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
-      <Text>--primary: {theme.colors?.primary}; <div style={{ borderRadius: '50%', background: 'var(--primary)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
-      <Text>--secondary: {theme.colors?.secondary}; <div style={{ borderRadius: '50%', background: 'var(--secondary)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
-      <Text>--success: {theme.colors?.success}; <div style={{ borderRadius: '50%', background: 'var(--success)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
-      <Text>--warning: {theme.colors?.warning}; <div style={{ borderRadius: '50%', background: 'var(--warning)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
-      <Text>--white: {theme.colors?.white}; <div style={{ borderRadius: '50%', background: 'var(--white)', height: '20px', width: '20px', border: '1px solid #ddd' }} /></Text>
-      <br />
-      <Text>--component-card--filter: {theme.components?.card?.filter};</Text>
-      <Text>--borderRadius: {theme.layout?.borderRadius};</Text>
-      <Text>--gap: {theme.layout?.gap};</Text>
-      <Text>--padding: {theme.layout?.padding};</Text>
+      <Text level={1} fontWeight={800}>Typography h1</Text>
+      <Text level={1}>Typography h1</Text>
+      <Text level={1} primary>Typography h1</Text>
+      <Text level={2} secondary>Typography h2</Text>
+      <Text level={3} fontWeight={600}>Typography h3</Text>
+      <Text level={4} accent>Typography h4</Text>
+      <Text level={5}>Typography h5</Text>
+      <Text level={6}>Typography h6</Text>
+      <Text level={6} color='var(--black)'>Typography h6</Text>
+      <Text secondary>Simple text with normal size</Text>
+      <Text>Simple text with normal size</Text>
+      <Hr />
 
-      <Text level={1} >Buttons</Text>
+      <Text level={2} >Buttons</Text>
+
       <Text level={4}>Normal</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
         <Button>Login</Button>
@@ -58,9 +49,11 @@ export default function Home() {
         <Button btnWarning btnInverted>Login</Button>
         <Button btnError btnInverted>Login</Button>
       </div>
+      <Hr />
 
-      <Text level={1} >Icon Component</Text>
-      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+      <Text level={2} >Icon Component</Text>
+
+      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', width: '100%' }}>
         <Icon iconName="Alarm" size={48} />
         <Icon iconName="Alien" size={48} />
         <Icon iconName="Dog" size={48} />
@@ -86,16 +79,15 @@ export default function Home() {
         <Icon iconName="Users" weight="bold" />
         <Text>and more...</Text>
       </div>
+      <Hr />
+      <Text level={2} >Input Component</Text>
 
-
-      <Text level={1} >Input Component</Text>
       <div style={{ maxWidth: '450px' }}>
         <Input label="Name" width={150} placeholder='full name here' />
       </div>
 
-      <Text level={1}>Box Component</Text>
-
-      <Card.Container>
+      <Text level={2}>Card Component</Text>
+      <Card.Container maxWidth='650px'>
         <Text level={1} secondary>Hello, </Text>
         <Card.Row>
           <Input label="Name" />
@@ -104,7 +96,7 @@ export default function Home() {
 
         <Input label="E-mail" type='email' />
 
-        <Card.Row>
+        <Card.Row end>
           <Button btnPrimary btnInverted btnBorderNone>
             <Icon iconName='User' />
             Join now
@@ -116,6 +108,26 @@ export default function Home() {
         </Card.Row>
 
       </Card.Container >
+      <Hr />
+
+      <Text level={2} >Global vars</Text>
+
+      <Text>--accent: {theme.colors?.accent}; <Marker color='var(--accent)' /> </Text>
+      <Text>--bg : {theme.colors?.body}; <Marker color='var(--bg)' /> </Text>
+      <Text>--black: {theme.colors?.black}; <Marker color='var(--black)' /></Text>
+      <Text>--error: {theme.colors?.error}; <Marker color='var(--error)' /></Text>
+      <Text>--lightGray: {theme.colors?.lightGray}; <Marker color='var(--lightGray)' /></Text>
+      <Text>--primary: {theme.colors?.primary}; <Marker color='var(--primary)' />  </Text>
+      <Text>--secondary: {theme.colors?.secondary}; <Marker color='var(--secondary)' /> </Text>
+      <Text>--success: {theme.colors?.success}; <Marker color='var(--success)' /> </Text>
+      <Text>--warning: {theme.colors?.warning}; <Marker color='var(--warning)' /> </Text>
+      <Text>--white: {theme.colors?.white}; <Marker color='var(--white)' /> </Text>
+      <br />
+      <Text>--component-card--filter: {theme.components?.card?.filter};</Text>
+      <Text>----size-text: {theme.sizes?.text};</Text>
+      <Text>--borderRadius: {theme.layout?.borderRadius};</Text>
+      <Text>--gap: {theme.layout?.gap};</Text>
+      <Text>--padding: {theme.layout?.padding};</Text>
 
     </div >
   )
