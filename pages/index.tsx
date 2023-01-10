@@ -1,6 +1,6 @@
 import pkg from '../package.json'
 import styles from '../styles/zionix.module.css'
-import { Button, Icon, Input, useThemeContext, Text, Card, Marker, Hr } from "@zionix/ui";
+import { Button, Icon, Input, useThemeContext, Text, Card, Marker, Hr, Tabs } from "@zionix/ui";
 
 export default function Home() {
 
@@ -86,7 +86,26 @@ export default function Home() {
         <Icon iconName="Users" weight="bold" />
         <Text>and more...</Text>
       </div>
+
+      <Text level={2} >Marker Component</Text>
+      <div style={{ display: 'flex', gap: '1.6rem', margin: '1.6rem 0' }}>
+        <Marker />
+        <Marker primary />
+        <Marker secondary />
+        <Marker accent />
+        <Marker success />
+        <Marker warning />
+        <Marker error />
+        <Marker color='#8e44ad' />
+      </div>
       <Hr />
+
+      <Text level={2} >Tabs Component</Text>
+      <Tabs title='#Tab Title' tabs={[
+        { iconName: 'Monitor', label: 'Design', component: (<Text>Content Tab #1</Text>) },
+        { iconName: 'Code', label: 'Code', component: (<Text>Content Tab #2</Text>) }]} />
+        <Hr />
+
       <Text level={2} >Input Component</Text>
 
       <div style={{ maxWidth: '450px' }}>
@@ -131,7 +150,7 @@ export default function Home() {
       <Text>--white: {theme.colors?.white}; <Marker color='var(--white)' /> </Text>
       <br />
       <Text>--component-card--filter: {theme.components?.card?.filter};</Text>
-      <Text>----size-text: {theme.sizes?.text};</Text>
+      <Text>--size-text: {theme.sizes?.text};</Text>
       <Text>--borderRadius: {theme.layout?.borderRadius};</Text>
       <Text>--gap: {theme.layout?.gap};</Text>
       <Text>--padding: {theme.layout?.padding};</Text>
