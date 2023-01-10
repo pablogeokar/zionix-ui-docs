@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import { ThemeContextProvider, ThemeFont } from "@zionix/ui";
+import { Analytics } from '@vercel/analytics/react';
 import Head from 'next/head'
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeContextProvider>
         <Component {...pageProps} />
       </ThemeContextProvider>
+      <Analytics />
     </>
   )
 }
