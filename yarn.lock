@@ -263,10 +263,10 @@
   resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-0.1.6.tgz#a1ce184168d8f5ec02e35ec954d84ee68ea01f4b"
   integrity sha512-zNd5pj3iDvq8IMBQHa1YRcIteiw6ZiPB8AsONHd8ieFXlNpLqhXfIYnf4WvTfZ7S1NSJ++mIM14aJnNac/VMXQ==
 
-"@zionix/ui@^0.3.4":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@zionix/ui/-/ui-0.3.4.tgz#3e4175209fa6e073508db9acd23e7974a5e21219"
-  integrity sha512-k+oowx0eujKX4cke36+8iQ8H8taV1NAKvJ5hTzr1Nehz8uSXng60zMrfSklZ//PtDv6WevFbx5wfbNf4jheidQ==
+"@zionix/ui@^0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@zionix/ui/-/ui-0.3.7.tgz#4e97499f09e9467b2fc58bb3eb30b21781b5cd30"
+  integrity sha512-t0XMZWIZnXkZp+eK8uBAOWPMyj0RccdsQ3fDQ+oIp2Ic5eP9SqT+meCgPzDR80e6alWXRMUv71SbIno0C+0TJw==
   dependencies:
     phosphor-react "^1.4.1"
 

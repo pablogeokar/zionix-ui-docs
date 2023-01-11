@@ -38,23 +38,23 @@ export default function Home() {
       <Text level={4}>Normal</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
         <Button>Login</Button>
-        <Button btnPrimary><Icon iconName='LockKeyOpen' />Sign In</Button>
-        <Button btnSecondary><Icon iconName='LockKeyOpen' />Login</Button>
-        <Button btnAccent>Login</Button>
-        <Button btnSuccess>Login</Button>
-        <Button btnWarning>Login</Button>
-        <Button btnError>Login</Button>
+        <Button primary><Icon iconName='LockKeyOpen' />Sign In</Button>
+        <Button secondary><Icon iconName='LockKeyOpen' />Login</Button>
+        <Button accent>Login</Button>
+        <Button success>Login</Button>
+        <Button warning>Login</Button>
+        <Button error>Login</Button>
 
       </div>
       <Text level={4}>Background transparent with inverted colors</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-        <Button btnInverted>Login</Button>
-        <Button btnPrimary btnInverted><Icon iconName='LockKeyOpen' />Sign In</Button>
-        <Button btnSecondary btnInverted><Icon iconName='LockKeyOpen' />Login</Button>
-        <Button btnAccent btnInverted>Login</Button>
-        <Button btnSuccess btnInverted>Login</Button>
-        <Button btnWarning btnInverted>Login</Button>
-        <Button btnError btnInverted>Login</Button>
+        <Button inverted>Login</Button>
+        <Button primary inverted><Icon iconName='LockKeyOpen' />Sign In</Button>
+        <Button secondary inverted><Icon iconName='LockKeyOpen' />Login</Button>
+        <Button accent inverted>Login</Button>
+        <Button success inverted>Login</Button>
+        <Button warning inverted>Login</Button>
+        <Button error inverted>Login</Button>
       </div>
       <Hr />
 
@@ -123,11 +123,11 @@ export default function Home() {
         <Input label="E-mail" type='email' />
 
         <Card.Row end>
-          <Button btnPrimary btnInverted btnBorderNone>
+          <Button primary inverted borderNone>
             <Icon iconName='User' />
             Join now
           </Button>
-          <Button btnPrimary>
+          <Button primary>
             <Icon iconName='LockKeyOpen' />
             Sign In
           </Button>
