@@ -44,6 +44,24 @@ export default function Home() {
         <Button iconName='Trash' label='Delete' danger />
         <Button iconName='Trash' label='Delete' warning />
       </div>
+      <Text level={4}>Disabled</Text>
+      <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+        <Button iconName='DownloadSimple' primary label='Download' disabled />
+        <Button iconName='Newspaper' label='News' secondary disabled />
+        <Button iconName='Alarm' label='Schedule' accent disabled />
+        <Button iconName='Archive' label='Archive' success disabled />
+        <Button iconName='Trash' label='Delete' danger disabled />
+        <Button iconName='Trash' label='Delete' warning disabled />
+      </div>
+      <Text level={4}>Loading</Text>
+      <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+        <Button iconName='DownloadSimple' primary label='Download' isLoading />
+        <Button iconName='Newspaper' label='News' secondary isLoading />
+        <Button iconName='Alarm' label='Schedule' accent isLoading />
+        <Button iconName='Archive' label='Archive' success isLoading />
+        <Button iconName='Trash' label='Delete' danger isLoading />
+        <Button iconName='Trash' label='Delete' warning isLoading />
+      </div>
       <Text level={4}>Background transparent with inverted colors</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
         <Button iconName='DownloadSimple' primaryInverted label='Download' />
@@ -55,12 +73,12 @@ export default function Home() {
       </div>
       <Text level={4}>Background transparent with inverted colors and border none</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-        <Button iconName='DownloadSimple' primaryInverted borderNone label='Download' />
-        <Button iconName='Newspaper' label='News' secondaryInverted borderNone/>
-        <Button iconName='Alarm' label='Schedule' accentInverted borderNone/>
-        <Button iconName='Archive' label='Archive' successInverted borderNone/>
-        <Button iconName='Trash' label='Delete' dangerInverted borderNone/>
-        <Button iconName='Trash' label='Delete' warningInverted borderNone/>
+        <Button iconName='DownloadSimple' primaryInverted bordernone label='Download' />
+        <Button iconName='Newspaper' label='News' secondaryInverted bordernone />
+        <Button iconName='Alarm' label='Schedule' accentInverted bordernone />
+        <Button iconName='Archive' label='Archive' successInverted bordernone />
+        <Button iconName='Trash' label='Delete' dangerInverted bordernone />
+        <Button iconName='Trash' label='Delete' warningInverted bordernone />
       </div>
       <Hr />
 
