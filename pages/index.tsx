@@ -37,24 +37,30 @@ export default function Home() {
 
       <Text level={4}>Normal</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-        <Button>Login</Button>
-        <Button primary><Icon iconName='LockKeyOpen' />Sign In</Button>
-        <Button secondary><Icon iconName='LockKeyOpen' />Login</Button>
-        <Button accent>Login</Button>
-        <Button success>Login</Button>
-        <Button warning>Login</Button>
-        <Button error>Login</Button>
-
+        <Button iconName='DownloadSimple' primary label='Download' />
+        <Button iconName='Newspaper' label='News' secondary />
+        <Button iconName='Alarm' label='Schedule' accent />
+        <Button iconName='Archive' label='Archive' success />
+        <Button iconName='Trash' label='Delete' danger />
+        <Button iconName='Trash' label='Delete' warning />
       </div>
       <Text level={4}>Background transparent with inverted colors</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-        <Button inverted>Login</Button>
-        <Button primary inverted><Icon iconName='LockKeyOpen' />Sign In</Button>
-        <Button secondary inverted><Icon iconName='LockKeyOpen' />Login</Button>
-        <Button accent inverted>Login</Button>
-        <Button success inverted>Login</Button>
-        <Button warning inverted>Login</Button>
-        <Button error inverted>Login</Button>
+        <Button iconName='DownloadSimple' primaryInverted label='Download' />
+        <Button iconName='Newspaper' label='News' secondaryInverted />
+        <Button iconName='Alarm' label='Schedule' accentInverted />
+        <Button iconName='Archive' label='Archive' successInverted />
+        <Button iconName='Trash' label='Delete' dangerInverted />
+        <Button iconName='Trash' label='Delete' warningInverted />
+      </div>
+      <Text level={4}>Background transparent with inverted colors and border none</Text>
+      <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+        <Button iconName='DownloadSimple' primaryInverted borderNone label='Download' />
+        <Button iconName='Newspaper' label='News' secondaryInverted borderNone/>
+        <Button iconName='Alarm' label='Schedule' accentInverted borderNone/>
+        <Button iconName='Archive' label='Archive' successInverted borderNone/>
+        <Button iconName='Trash' label='Delete' dangerInverted borderNone/>
+        <Button iconName='Trash' label='Delete' warningInverted borderNone/>
       </div>
       <Hr />
 
@@ -104,7 +110,7 @@ export default function Home() {
       <Tabs title='#Tab Title' tabs={[
         { iconName: 'Monitor', label: 'Design', component: (<Text>Content Tab #1</Text>) },
         { iconName: 'Code', label: 'Code', component: (<Text>Content Tab #2</Text>) }]} />
-        <Hr />
+      <Hr />
 
       <Text level={2} >Input Component</Text>
 
@@ -123,14 +129,8 @@ export default function Home() {
         <Input label="E-mail" type='email' />
 
         <Card.Row end>
-          <Button primary inverted borderNone>
-            <Icon iconName='User' />
-            Join now
-          </Button>
-          <Button primary>
-            <Icon iconName='LockKeyOpen' />
-            Sign In
-          </Button>
+          <Button primaryInverted label="Join now" iconName='AddressBook' />
+          <Button primary label='Sign In' iconName='SignIn' />
         </Card.Row>
 
       </Card.Container >
@@ -141,7 +141,7 @@ export default function Home() {
       <Text>--accent: {theme.colors?.accent}; <Marker color='var(--accent)' /> </Text>
       <Text>--bg : {theme.colors?.body}; <Marker color='var(--bg)' /> </Text>
       <Text>--black: {theme.colors?.black}; <Marker color='var(--black)' /></Text>
-      <Text>--error: {theme.colors?.error}; <Marker color='var(--error)' /></Text>
+      <Text>--danger: {theme.colors?.danger}; <Marker color='var(--danger)' /></Text>
       <Text>--lightGray: {theme.colors?.lightGray}; <Marker color='var(--lightGray)' /></Text>
       <Text>--primary: {theme.colors?.primary}; <Marker color='var(--primary)' />  </Text>
       <Text>--secondary: {theme.colors?.secondary}; <Marker color='var(--secondary)' /> </Text>
