@@ -1,6 +1,6 @@
 import pkg from '../package.json'
 import styles from '../styles/zionix.module.css'
-import { Button, Icon, Input, useThemeContext, Text, Card, Marker, Hr, Tabs } from "@zionix/ui";
+import { Form, Button, Icon, Input, useThemeContext, Text, Card, Marker, Hr, Tabs } from "@zionix/ui";
 
 export default function Home() {
 
@@ -37,52 +37,53 @@ export default function Home() {
 
       <Text level={4}>Normal</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-        <Button iconName='DownloadSimple' primary label='Download' />
-        <Button iconName='Newspaper' label='News' secondary />
-        <Button iconName='Alarm' label='Schedule' accent />
-        <Button iconName='Archive' label='Archive' success />
-        <Button iconName='Trash' label='Delete' danger />
-        <Button iconName='Trash' label='Delete' warning />
+        <Button label='Download' primaryInverted bordernone />
+        <Button icon='DownloadSimple' primary label='Download' />
+        <Button icon='Newspaper' label='News' secondary />
+        <Button icon='Alarm' label='Schedule' accent />
+        <Button icon='Archive' label='Archive' success />
+        <Button icon='Trash' label='Delete' danger />
+        <Button icon='Trash' label='Delete' warning />
       </div>
       <Text level={4}>Disabled</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-        <Button iconName='DownloadSimple' primary label='Download' disabled />
-        <Button iconName='Newspaper' label='News' secondary disabled />
-        <Button iconName='Alarm' label='Schedule' accent disabled />
-        <Button iconName='Archive' label='Archive' success disabled />
-        <Button iconName='Trash' label='Delete' danger disabled />
-        <Button iconName='Trash' label='Delete' warning disabled />
+        <Button icon='DownloadSimple' primary label='Download' disabled />
+        <Button icon='Newspaper' label='News' secondary disabled />
+        <Button icon='Alarm' label='Schedule' accent disabled />
+        <Button icon='Archive' label='Archive' success disabled />
+        <Button icon='Trash' label='Delete' danger disabled />
+        <Button icon='Trash' label='Delete' warning disabled />
       </div>
       <Text level={4}>Loading</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-        <Button iconName='DownloadSimple' primary label='Download' isLoading />
-        <Button iconName='Newspaper' label='News' secondary isLoading />
-        <Button iconName='Alarm' label='Schedule' accent isLoading />
-        <Button iconName='Archive' label='Archive' success isLoading />
-        <Button iconName='Trash' label='Delete' danger isLoading />
-        <Button iconName='Trash' label='Delete' warning isLoading />
+        <Button icon='DownloadSimple' primary label='Download' isLoading />
+        <Button icon='Newspaper' label='News' secondary isLoading />
+        <Button icon='Alarm' label='Schedule' accent isLoading />
+        <Button icon='Archive' label='Archive' success isLoading />
+        <Button icon='Trash' label='Delete' danger isLoading />
+        <Button icon='Trash' label='Delete' warning isLoading />
       </div>
       <Text level={4}>Background transparent with inverted colors</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-        <Button iconName='DownloadSimple' primaryInverted label='Download' />
-        <Button iconName='Newspaper' label='News' secondaryInverted />
-        <Button iconName='Alarm' label='Schedule' accentInverted />
-        <Button iconName='Archive' label='Archive' successInverted />
-        <Button iconName='Trash' label='Delete' dangerInverted />
-        <Button iconName='Trash' label='Delete' warningInverted />
+        <Button icon='DownloadSimple' primaryInverted label='Download' />
+        <Button icon='Newspaper' label='News' secondaryInverted />
+        <Button icon='Alarm' label='Schedule' accentInverted />
+        <Button icon='Archive' label='Archive' successInverted />
+        <Button icon='Trash' label='Delete' dangerInverted />
+        <Button icon='Trash' label='Delete' warningInverted />
       </div>
       <Text level={4}>Background transparent with inverted colors and border none</Text>
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-        <Button iconName='DownloadSimple' primaryInverted bordernone label='Download' />
-        <Button iconName='Newspaper' label='News' secondaryInverted bordernone />
-        <Button iconName='Alarm' label='Schedule' accentInverted bordernone />
-        <Button iconName='Archive' label='Archive' successInverted bordernone />
-        <Button iconName='Trash' label='Delete' dangerInverted bordernone />
-        <Button iconName='Trash' label='Delete' warningInverted bordernone />
+        <Button icon='DownloadSimple' primaryInverted bordernone label='Download' />
+        <Button icon='Newspaper' label='News' secondaryInverted bordernone />
+        <Button icon='Alarm' label='Schedule' accentInverted bordernone />
+        <Button icon='Archive' label='Archive' successInverted bordernone />
+        <Button icon='Trash' label='Delete' dangerInverted bordernone />
+        <Button icon='Trash' label='Delete' warningInverted bordernone />
       </div>
       <Hr />
 
-      <Text level={2} >Icon Component</Text>
+      <Text level={2} >Icon</Text>
 
       <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', width: '100%' }}>
         <Icon iconName="Alarm" size={48} />
@@ -111,7 +112,7 @@ export default function Home() {
         <Text>and more...</Text>
       </div>
 
-      <Text level={2} >Marker Component</Text>
+      <Text level={2} >Marker</Text>
       <div style={{ display: 'flex', gap: '1.6rem', margin: '1.6rem 0' }}>
         <Marker />
         <Marker primary />
@@ -124,19 +125,40 @@ export default function Home() {
       </div>
       <Hr />
 
-      <Text level={2} >Tabs Component</Text>
+      <Text level={2} >Tabs</Text>
       <Tabs title='#Tab Title' tabs={[
         { iconName: 'Monitor', label: 'Design', component: (<Text>Content Tab #1</Text>) },
         { iconName: 'Code', label: 'Code', component: (<Text>Content Tab #2</Text>) }]} />
       <Hr />
 
-      <Text level={2} >Input Component</Text>
+      <Text level={2} >Input</Text>
 
       <div style={{ maxWidth: '450px' }}>
         <Input label="Name" width={150} placeholder='full name here' />
       </div>
 
-      <Text level={2}>Card Component</Text>
+      <Text level={2}>Form</Text>
+      <Form.Container method='post' maxWidth='650px'>
+        <Text level={2} separator>
+          <Icon iconName='UserPlus' /> New user
+        </Text>
+        <Form.Row>
+          <Input label='Name:' />
+          <Input label='Lastname:' />
+        </Form.Row>
+        <Form.Row>
+          <Input label='Password:' type='password' />
+          <Input label='Confirm password:' type='password' />
+        </Form.Row>
+        <Input label='Email:' />
+        <Form.Row end>
+          <Button type='reset' label='Clear form' />
+          <Button icon='Check' label='Save' success onClick={() => alert('Hello World!')} />
+        </Form.Row>
+      </Form.Container>
+      <Hr />
+
+      <Text level={2}>Card</Text>
       <Card.Container maxWidth='650px'>
         <Text level={1} secondary>Hello, </Text>
         <Card.Row>
@@ -147,14 +169,14 @@ export default function Home() {
         <Input label="E-mail" type='email' />
 
         <Card.Row end>
-          <Button primaryInverted label="Join now" iconName='AddressBook' />
-          <Button primary label='Sign In' iconName='SignIn' />
+          <Button primaryInverted label="Join now" icon='AddressBook' />
+          <Button primary label='Sign In' icon='SignIn' />
         </Card.Row>
 
       </Card.Container >
       <Hr />
 
-      <Text level={2} >Global vars</Text>
+      <Text level={2} >css vars</Text>
 
       <Text>--accent: {theme.colors?.accent}; <Marker color='var(--accent)' /> </Text>
       <Text>--bg : {theme.colors?.body}; <Marker color='var(--bg)' /> </Text>
