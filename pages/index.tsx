@@ -1,6 +1,9 @@
 import pkg from '../package.json'
 import styles from '../styles/zionix.module.css'
+import { TabTypography, TabTypographyCode } from '../components'
+
 import { Form, Button, Icon, Input, useThemeContext, Text, Card, Marker, Hr, Tabs } from "@zionix/ui";
+
 
 export default function Home() {
 
@@ -20,7 +23,12 @@ export default function Home() {
       </div>
       <Hr />
 
-      <Text level={1} fontWeight={800}>Typography h1</Text>
+      <Text level={1} fontWeight={800}>Typography</Text>
+      <Tabs minHeight='600px' tabs={[
+        { icon: 'Eye', label: 'design view', component: <TabTypography /> },
+        { icon: 'Code', label: 'code view', component: <TabTypographyCode /> }
+      ]} />
+      {/**
       <Text level={1}>Typography h1</Text>
       <Text level={1} primary>Typography h1</Text>
       <Text level={2} secondary>Typography h2</Text>
@@ -31,6 +39,7 @@ export default function Home() {
       <Text level={6} color='var(--black)'>Typography h6</Text>
       <Text secondary>Simple text with normal size</Text>
       <Text>Simple text with normal size</Text>
+       */}
       <Hr />
 
       <Text level={2} >Buttons</Text>
@@ -122,13 +131,14 @@ export default function Home() {
         <Marker warning />
         <Marker error />
         <Marker color='#8e44ad' />
+        <Marker color='var(--gray)' />
       </div>
       <Hr />
 
       <Text level={2} >Tabs</Text>
-      <Tabs title='#Tab Title' tabs={[
-        { iconName: 'Monitor', label: 'Design', component: (<Text>Content Tab #1</Text>) },
-        { iconName: 'Code', label: 'Code', component: (<Text>Content Tab #2</Text>) }]} />
+      <Tabs tabs={[
+        { icon: 'Monitor', label: 'Design', component: (<Text>Content Tab #1</Text>) },
+        { icon: 'Code', label: 'Code', component: (<Text>Content Tab #2</Text>) }]} />
       <Hr />
 
       <Text level={2} >Input</Text>
@@ -182,6 +192,7 @@ export default function Home() {
       <Text>--bg : {theme.colors?.body}; <Marker color='var(--bg)' /> </Text>
       <Text>--black: {theme.colors?.black}; <Marker color='var(--black)' /></Text>
       <Text>--danger: {theme.colors?.danger}; <Marker color='var(--danger)' /></Text>
+      <Text>--gray: {theme.colors?.gray}; <Marker color='var(--gray)' /></Text>
       <Text>--lightGray: {theme.colors?.lightGray}; <Marker color='var(--lightGray)' /></Text>
       <Text>--primary: {theme.colors?.primary}; <Marker color='var(--primary)' />  </Text>
       <Text>--secondary: {theme.colors?.secondary}; <Marker color='var(--secondary)' /> </Text>
