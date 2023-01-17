@@ -11,10 +11,14 @@ import {
   MarkerComponentCode,
   TabsComponentCode,
   InputComponent,
-  InputComponentCode
+  InputComponentCode,
+  FormComponent,
+  FormComponentCode,
+  CardComponent,
+  CardComponentCode
 } from '../components'
 
-import { Form, Button, Icon, Input, useThemeContext, Text, Card, Marker, Hr, Tabs } from "@zionix/ui";
+import { useThemeContext, Text, Marker, Hr, Tabs } from "@zionix/ui";
 
 
 export default function Home() {
@@ -81,42 +85,17 @@ export default function Home() {
       <Hr />
 
       <Text level={1} fontWeight={800}>Form</Text>
-      <Form.Container method='post' maxWidth='650px'>
-        <Text level={2} separator>
-          <Icon iconName='UserPlus' size={36} /> New user
-        </Text>
-        <Form.Row>
-          <Input label='Name:' />
-          <Input label='Lastname:' />
-        </Form.Row>
-        <Form.Row>
-          <Input label='Password:' type='password' />
-          <Input label='Confirm password:' type='password' />
-        </Form.Row>
-        <Input label='Email:' />
-        <Form.Row end>
-          <Button type='reset' label='Clear form' />
-          <Button icon='Check' label='Save' success onClick={() => alert('Hello World!')} />
-        </Form.Row>
-      </Form.Container>
+      <Tabs minHeight='650px' tabs={[
+        { icon: 'Eye', label: 'design view', component: <FormComponent /> },
+        { icon: 'Code', label: 'code view', component: <FormComponentCode /> }
+      ]} />
       <Hr />
 
       <Text level={1} fontWeight={800}>Card</Text>
-      <Card.Container maxWidth='650px'>
-        <Text level={1} secondary>Hello, </Text>
-        <Card.Row>
-          <Input label="Name" />
-          <Input label="Last name" />
-        </Card.Row>
-
-        <Input label="E-mail" type='email' />
-
-        <Card.Row end>
-          <Button primaryInverted label="Join now" icon='AddressBook' />
-          <Button primary label='Sign In' icon='SignIn' />
-        </Card.Row>
-
-      </Card.Container >
+      <Tabs minHeight='500px' tabs={[
+        { icon: 'Eye', label: 'design view', component: <CardComponent /> },
+        { icon: 'Code', label: 'code view', component: <CardComponentCode /> }
+      ]} />
       <Hr />
 
       <Text level={1} fontWeight={800} >css vars</Text>

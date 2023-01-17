@@ -271,7 +271,7 @@ function InputComponent() {
   )
 }
 function InputComponentCode() {
-  return(
+  return (
     <Highlight className='jsx'>
       <pre>
         {`
@@ -280,7 +280,105 @@ function InputComponentCode() {
       </pre>
     </Highlight>
   )
- }
+}
+
+function FormComponent() {
+  return (
+    <Form.Container method='post' maxWidth='650px'>
+      <Text level={2} separator>
+        <Icon iconName='UserPlus' size={36} /> New user
+      </Text>
+      <Form.Row>
+        <Input label='Name:' />
+        <Input label='Lastname:' />
+      </Form.Row>
+      <Form.Row>
+        <Input label='Password:' type='password' />
+        <Input label='Confirm password:' type='password' />
+      </Form.Row>
+      <Input label='Email:' />
+      <Form.Row end>
+        <Button type='reset' label='Clear form' />
+        <Button icon='Check' label='Save' success onClick={() => alert('Hello World!')} />
+      </Form.Row>
+    </Form.Container>
+  )
+}
+function FormComponentCode() {
+  return (
+    <Highlight className='jsx'>
+      <pre>
+        {`
+        <Form.Container method='post' maxWidth='650px'>
+        <Text level={2} separator>
+          <Icon iconName='UserPlus' size={36} /> New user
+        </Text>
+        <Form.Row>
+          <Input label='Name:' />
+          <Input label='Lastname:' />
+        </Form.Row>
+        <Form.Row>
+          <Input label='Password:' type='password' />
+          <Input label='Confirm password:' type='password' />
+        </Form.Row>
+        <Input label='Email:' />
+        <Form.Row end>
+          <Button type='reset' label='Clear form' />
+          <Button icon='Check' label='Save' success onClick={() => alert('Hello World!')} />
+        </Form.Row>
+      </Form.Container>
+        `}
+      </pre>
+    </Highlight>
+  )
+}
+
+function CardComponent() {
+  return (
+    <Card.Container maxWidth='650px'>
+      <Text level={1} secondary>Hello, </Text>
+      <Card.Row>
+        <Input label="Name" />
+        <Input label="Last name" />
+      </Card.Row>
+
+      <Input label="E-mail" type='email' />
+
+      <Card.Row end>
+        <Button primaryInverted label="Join now" icon='AddressBook' />
+        <Button primary label='Sign In' icon='SignIn' />
+      </Card.Row>
+
+    </Card.Container >
+  )
+}
+function CardComponentCode() {
+  return (
+    <Highlight className='jsx'>
+      <pre>
+        {`
+        <Card.Container maxWidth='650px'>
+
+        <Text level={1} secondary>Hello, </Text>
+        
+        <Card.Row>
+          <Input label="Name" />
+          <Input label="Last name" />
+        </Card.Row>
+  
+        <Input label="E-mail" type='email' />
+  
+        <Card.Row end>
+          <Button primaryInverted label="Join now" icon='AddressBook' />
+          <Button primary label='Sign In' icon='SignIn' />
+        </Card.Row>
+  
+      </Card.Container >
+        `}
+      </pre>
+    </Highlight>
+  )
+}
 
 
 export {
@@ -295,4 +393,8 @@ export {
   TabsComponentCode,
   InputComponent,
   InputComponentCode,
+  FormComponent,
+  FormComponentCode,
+  CardComponent,
+  CardComponentCode
 }
