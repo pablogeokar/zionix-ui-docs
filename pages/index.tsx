@@ -1,6 +1,18 @@
 import pkg from '../package.json'
 import styles from '../styles/zionix.module.css'
-import { ButtonsComponent, TabTypography, TabTypographyCode } from '../components'
+import {
+  ButtonsComponent,
+  ButtonsComponentCode,
+  TabTypography,
+  TabTypographyCode,
+  IconComponent,
+  IconComponentCode,
+  MarkerComponent,
+  MarkerComponentCode,
+  TabsComponentCode,
+  InputComponent,
+  InputComponentCode
+} from '../components'
 
 import { Form, Button, Icon, Input, useThemeContext, Text, Card, Marker, Hr, Tabs } from "@zionix/ui";
 
@@ -23,7 +35,7 @@ export default function Home() {
       </div>
       <Hr />
 
-      <Text level={2} fontWeight={800}>Typography</Text>
+      <Text level={1} fontWeight={800}>Typography</Text>
       <Tabs minHeight='600px' tabs={[
         { icon: 'Eye', label: 'design view', component: <TabTypography /> },
         { icon: 'Code', label: 'code view', component: <TabTypographyCode /> }
@@ -31,73 +43,47 @@ export default function Home() {
 
       <Hr />
 
-      <Text level={2} >Buttons</Text>
+      <Text level={1} fontWeight={800} >Buttons</Text>
       <Tabs minHeight='900px' tabs={[
         { icon: 'Eye', label: 'design view', component: <ButtonsComponent /> },
-        { icon: 'Code', label: 'code view', component: <TabTypographyCode /> }
+        { icon: 'Code', label: 'code view', component: <ButtonsComponentCode /> }
       ]} />
 
       <Hr />
 
-      <Text level={2} >Icon</Text>
-
-      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', width: '100%' }}>
-        <Icon iconName="Alarm" size={48} />
-        <Icon iconName="Alien" size={48} />
-        <Icon iconName="Dog" size={48} />
-        <Icon iconName="House" size={48} />
-        <Icon iconName="Pencil" size={48} />
-        <Icon iconName="User" size={48} />
-        <Icon iconName="Users" size={48} />
-
-        <Icon iconName="Alarm" weight="duotone" />
-        <Icon iconName="Alien" weight="duotone" />
-        <Icon iconName="Dog" weight="duotone" />
-        <Icon iconName="House" weight="duotone" />
-        <Icon iconName="Pencil" weight="duotone" />
-        <Icon iconName="User" weight="duotone" />
-        <Icon iconName="Users" weight="duotone" />
-
-        <Icon iconName="Alarm" weight="bold" />
-        <Icon iconName="Alien" weight="bold" />
-        <Icon iconName="Dog" weight="bold" />
-        <Icon iconName="House" weight="bold" />
-        <Icon iconName="Pencil" weight="bold" />
-        <Icon iconName="User" weight="bold" />
-        <Icon iconName="Users" weight="bold" />
-        <Text>and more...</Text>
-      </div>
-
-      <Text level={2} >Marker</Text>
-      <div style={{ display: 'flex', gap: '1.6rem', margin: '1.6rem 0' }}>
-        <Marker />
-        <Marker primary />
-        <Marker secondary />
-        <Marker accent />
-        <Marker success />
-        <Marker warning />
-        <Marker error />
-        <Marker color='#8e44ad' />
-        <Marker color='var(--gray)' />
-      </div>
+      <Text level={1} fontWeight={800} >Icon</Text>
+      <Tabs minHeight='200px' tabs={[
+        { icon: 'Eye', label: 'design view', component: <IconComponent /> },
+        { icon: 'Code', label: 'code view', component: <IconComponentCode /> }
+      ]} />
       <Hr />
 
-      <Text level={2} >Tabs</Text>
+      <Text level={1} fontWeight={800} >Marker</Text>
+      <Tabs minHeight='150px' tabs={[
+        { icon: 'Eye', label: 'design view', component: <MarkerComponent /> },
+        { icon: 'Code', label: 'code view', component: <MarkerComponentCode /> }
+      ]} />
+      <Hr />
+
+      <Text level={1} fontWeight={800} >Tabs</Text>
       <Tabs tabs={[
-        { icon: 'Monitor', label: 'Design', component: (<Text>Content Tab #1</Text>) },
-        { icon: 'Code', label: 'Code', component: (<Text>Content Tab #2</Text>) }]} />
+        { icon: 'Monitor', label: 'Design', component: (<Text level={1}>Content Tab #1</Text>) },
+        { icon: 'Code', label: 'Code', component: <TabsComponentCode /> },
+        { icon: 'Alien', label: 'Aliens', component: (<Text level={1}>Content Tab #3</Text>) },
+        { icon: 'Archive', label: 'Archive', component: (<Text level={1}>Content Tab #4</Text>) }]} />
       <Hr />
 
-      <Text level={2} >Input</Text>
+      <Text level={1} fontWeight={800} >Input</Text>
+      <Tabs minHeight='200px' tabs={[
+        { icon: 'Eye', label: 'design view', component: <InputComponent /> },
+        { icon: 'Code', label: 'code view', component: <InputComponentCode /> }
+      ]} />
+      <Hr />
 
-      <div style={{ maxWidth: '450px' }}>
-        <Input label="Name" width={150} placeholder='full name here' />
-      </div>
-
-      <Text level={2}>Form</Text>
+      <Text level={1} fontWeight={800}>Form</Text>
       <Form.Container method='post' maxWidth='650px'>
         <Text level={2} separator>
-          <Icon iconName='UserPlus' /> New user
+          <Icon iconName='UserPlus' size={36} /> New user
         </Text>
         <Form.Row>
           <Input label='Name:' />
@@ -115,7 +101,7 @@ export default function Home() {
       </Form.Container>
       <Hr />
 
-      <Text level={2}>Card</Text>
+      <Text level={1} fontWeight={800}>Card</Text>
       <Card.Container maxWidth='650px'>
         <Text level={1} secondary>Hello, </Text>
         <Card.Row>
@@ -133,7 +119,7 @@ export default function Home() {
       </Card.Container >
       <Hr />
 
-      <Text level={2} >css vars</Text>
+      <Text level={1} fontWeight={800} >css vars</Text>
 
       <Text>--accent: {theme.colors?.accent}; <Marker color='var(--accent)' /> </Text>
       <Text>--bg : {theme.colors?.body}; <Marker color='var(--bg)' /> </Text>
